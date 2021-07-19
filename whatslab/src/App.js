@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import FundoWhatsLab from './img/fundoWhatsLab.jpg'
 
 const AppContainer = styled.div`
   border: 1px solid black;
@@ -13,10 +12,8 @@ const AppContainer = styled.div`
   grid-template-rows: 1fr 50px ;
   justify-items: center ;
   align-items: center;
-
-
-
 `
+
 const MensagemContainer = styled.div`
   box-sizing: border-box;
   padding: 16px;
@@ -41,28 +38,27 @@ const MensagemContainer = styled.div`
 
     };
   }
-
 `
 const InputsContainer = styled.div`
-
-
-
-
 `
+
 const UsuarioInput = styled.input`
   width: 100px;
   border-radius: 10px;
   margin: 0 5px 0 0;
-
-
 `
+
 const MensagemInput = styled.input`
 width: 400px;
 border-radius: 10px;
 margin: 0 5px 0 0;
-  
-
 `
+
+const MeuBotao = styled.button`
+  border-radius: 15px;
+`
+
+
 class App extends React.Component {
   state = {
     mensagens: [],
@@ -119,7 +115,7 @@ class App extends React.Component {
             value={this.state.mensagemValue}
             placeholder={'Mensagem'}
           />
-          <button onClick={this.enviaMensagem}>Enviar</button>
+          <MeuBotao onClick={this.enviaMensagem}>Enviar</MeuBotao>
         </InputsContainer>
       </AppContainer>
     );
